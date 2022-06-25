@@ -1,0 +1,19 @@
+ pivot := last
+i := first - 1
+
+for j := first; j < len(arr); j++ {
+if len(arr) < 2 {
+return arr
+} else if arr[j] > pivot {
+continue
+} else if arr[j] < pivot {
+i++
+arr[i], arr[j] = arr[j], arr[i]
+
+} else if arr[j] == pivot {
+i++
+arr[i], arr[j] = arr[j], arr[i]
+}
+}
+
+return arr
